@@ -1,0 +1,40 @@
+// Example 1: Simple if-else
+val num = 10
+if (num > 0) {
+  println("Positive")
+} else {
+  println("Non-positive")
+}
+
+
+// Example 2: While loop
+var i = 1
+while (i <= 5) {
+  println(s"Current value of i: $i")
+  i += 1
+}
+
+// Example 3: For loop with a range
+for (i <- 1 to 5) {
+  println(s"Current value of i: $i")
+}
+
+// Example 4: For loop with a collection
+val fruits = Array("Apple", "Banana", "Orange")
+for (fruit <- fruits) {
+  println(s"Current fruit: $fruit")
+}
+
+// Functions
+object FunctionsExample {
+  def main(args: Array[String]): Unit = {
+    // Function with parameters and return value
+    def addNumbers(a: Int, b: Int): Int = {
+      a + b
+    }
+
+    // Calling the function and printing the result
+    val sum = addNumbers(5, 3)
+    println(s"Sum: $sum")
+  }
+}
