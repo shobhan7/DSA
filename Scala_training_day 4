@@ -1,0 +1,185 @@
+//Strings and its methods in scala
+
+object Main {
+  val num1=44
+  var num2=22.23
+  var str1:String="helloworld";
+  var str="shobhan"
+  def main(args: Array[String]): Unit = {
+    println(str1.lengthIs);
+    println(str1.concat(str1))
+    println(str+str1)
+    var result=printf("(%d--%f--%s)",num1,num2,str);
+    println(result)
+    printf("(%d--%f--%s)".format(num1,num2,str));
+
+  }
+
+  }
+  
+  //Arrays in scala
+
+object Main {
+ val myarray:Array[Int]=new Array[Int](4)
+ val a2=new Array[Int](5)
+ val a=Array(1,2,3,4,5,6,7,8)
+  val myarray1=Array(1,2,3,4,5,6,7,8)
+  def main(args: Array[String]): Unit = {
+    myarray(0)=20
+    myarray(1)=30
+    myarray(2)=40
+    myarray(3)=50
+    println(a.length)
+    var b=a.concat(myarray1)
+    println(b)
+    for(i<- a) {
+    println(i)
+     };
+    for (i <- a2) {
+      println(i)
+    };
+   for(j<-0 to (myarray.length-1)){
+     println(myarray(j))
+   }
+
+  }
+
+  }
+  
+  //Lists in scala
+import jdk.internal.reflect.Reflection
+
+
+object Main {
+val mylist:List[Int]=List(1,2,3,4,5,56,6)
+  val name:List[String]=List("shobhan","babu")
+  def main(args:Array[String]): Unit = {
+    println(0::mylist)
+    println(mylist)
+    println(name)
+    println(Nil)
+    println(mylist.head)
+    println(mylist.tail)
+    println(mylist.isEmpty)
+    println(mylist.reverse)
+    println(List.fill(5)(2))
+    println(mylist.max)
+    mylist.foreach(println)
+    mylist.foreach(println)
+    var sum:Int=0
+    mylist.foreach(sum+=_)
+    println(sum)
+    for(ns<-name){
+      println(ns)
+    }
+
+  }
+  }
+  
+  
+  //Sets in scala
+import jdk.internal.reflect.Reflection
+
+object Main {
+val myset:Set[Int]=Set(1,2,3,4,5,5,6)
+  val myset2:Set[Int]=Set(1,2,3,4,5,5,6)
+
+  val name:Set[String]=Set("shobhan","babu","babu")
+  def main(args:Array[String]): Unit = {
+
+    println(myset+10)
+    println(name)
+    println(Nil)
+    println(myset(5))
+    println(myset(25))
+    println(myset.head)
+    println(myset.tail)
+    println(myset.isEmpty)
+    println(myset ++ myset2)
+    println(myset.++(myset2))
+    println(myset.&(myset2))
+    println(myset.max)
+    println(myset.min)
+    myset.foreach(println)
+    for(n<-name){
+      println(name)
+    }
+
+
+  }
+  }
+
+
+
+//Maps in scala
+object Main {
+  val mymap2: Map[Int, String] = Map(1 -> "shobhan", 2 -> "babu", 3 -> "babu")
+
+  val mymap: Map[Int, String] = Map(1 -> "shobhan", 2 -> "babu", 3 -> "babu")
+def main(args: Array[String]) {
+  println(mymap)
+  println(mymap(1))
+  println(mymap.keys)
+  println(mymap.isEmpty)
+  println(mymap.values)
+  mymap.keys.foreach{ key=>
+        println("key":+key)
+       println("valuse"+ mymap(key))
+  }
+  println(mymap.contains(8020))
+  println(mymap ++ mymap2)
+  println(mymap.size)
+
+
+}
+  }
+
+
+
+//Tuples in scala
+object Main {
+  val myt=(1,2,3,4,"shobhan",true,0.0,00.0f)
+  var myt2=new Tuple4("shobhan",0,2,(1,2))
+//  var myt3=new Tuple22("shobhan",0,2,3)
+def main(args: Array[String]) {
+  println(myt)
+  println(myt2)
+  println(myt._1)
+  println(myt2._1)
+  myt.productIterator.foreach{
+    i=>println(i)
+  }
+
+  println(1->"shohan")
+  println(myt2._3)
+
+
+
+}
+  }
+  
+  
+
+//Options in scala
+object Main {
+  val myt=List(1,2,3,5,4)
+  val map=Map(1->"shobhan",2->"bbau",3->5)
+ // var opt:Option[Int]=(1,2);
+//  var myt3=new Tuple22("shobhan",0,2,3)
+def main(args: Array[String]) {
+  println(myt.find(_>2))
+  println(map.get(1))
+  println(myt.find(_>2).get)
+  //println(map.get(5).get)
+  println(map.get(5).getOrElse("no name found"))
+  println(opt.get)
+
+
+
+
+}
+  }
+
+
+
+
