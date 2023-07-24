@@ -1,19 +1,33 @@
 //Map ,flatmap,and filter in scala
 object Main {
 val list=List(1,2,3,3,4,5,6,10)
+
 val mymap=Map(1->"shobhan",3->"babu",4->"babu")
+
   def main(args: Array[String]): Unit = {
+
     println("Hello world!")
+
     println(list.map(_*2));
+
     println(list);
+
     println(mymap);
+
     println(list.map(x=>"shobhan"*x));
+
     println(mymap.map(x=>"hi"+x));
+
     println(mymap.mapValues(x=>"hi"+x));
+
     println("hi".map(_.toUpper))
+
     println("hi".map(_.toLower))
+
     println(List(List(1,2,3),List(3,4,5,6)).flatten)
+
     println(list.flatMap(x=>List(x,x+1)))
+
     println(list.map(x=>List(x,x+1)))
 
     println(list.filter(x => x/2==0))
@@ -22,30 +36,16 @@ val mymap=Map(1->"shobhan",3->"babu",4->"babu")
   }
 }
 
-//reduce  (left-right)in scala
-object Main {
-val list=List(1,2,3,4,5,6)
-  val list2=List("A","B","C","D")
 
-  def main(args: Array[String]): Unit = {
-    println("Hello world!")
-
-    println(list2.reduceLeft(_+_));
-
-    println(list.reduceLeft(_+_));
-
-    println(list.reduceRight(_+_));
-
-  println(list.reduceRight((x,y)=>{println(x+","+y);x-y}));
-}
-}
 
 //fold  (left-right)in scala
 object Main {
 val list=List(1,2,3,4,5,6)
+
   val list2=List("A","B","C","D")
 
   def main(args: Array[String]): Unit = {
+
     println("Hello world!")
 
 
@@ -59,29 +59,6 @@ val list=List(1,2,3,4,5,6)
     println(list2.foldLeft("s")(_+_))
 
    
-  }
-}
-
-//scan  (left-right)in scala
-object Main {
-val list=List(1,2,3,4,5,6)
-  val list2=List("A","B","C","D")
-
-  def main(args: Array[String]): Unit = {
-    println("Hello world!")
-
-    println(list2.scanLeft("s")(_ + _))
-
-    println(list2.scanRight("s")(_ + _))
-
-    println(list.scanRight(0)(_ + _))
-
-    println(list.scanLeft(0)(_ + _))
-
-
-
-
-
   }
 }
 
