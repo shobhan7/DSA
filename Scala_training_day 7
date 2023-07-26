@@ -1,0 +1,93 @@
+//Classes in scala
+
+class User( private var name:String,var age:Int)
+{
+  def Printname{
+    println(name,age)
+  }
+}
+object Main {
+  def main(args: Array[String]): Unit = {
+
+    println("Hello world!")
+
+    var user= new User("shobhan",24)
+
+    user.Printname;
+    
+    // println(user.name)
+
+    // println(user.age)
+    
+    //user.name="babu"
+    
+    //user.age=44
+
+   // println(user.name)
+
+   // println(user.age)
+
+    //println( user)
+
+  }
+}
+
+
+//Auxiliary constructors in scala
+
+class User(  var name:String,var age:Int)
+{
+ def this() {
+   this("shobha",22)
+ 
+   
+  def this(name:String) {
+    this(name,33)
+    
+  }
+}
+object Main {
+  def main(args: Array[String]): Unit = {
+
+
+    var user1= new User("shobhan",24)
+    
+    var user2= new User()
+    
+    var user3= new User("shobhank")
+
+    println(user1.name)
+    println(user1.age)
+
+    println(user2.name)
+    println(user2.age)
+
+    println(user3.name)
+    println(user3.age)
+
+
+  }
+}
+
+//scan  (left-right)in scala
+object Main {
+val list=List(1,2,3,4,5,6)
+  val list2=List("A","B","C","D")
+
+  def main(args: Array[String]): Unit = {
+    println("Hello world!")
+
+    println(list2.scanLeft("s")(_ + _))
+
+    println(list2.scanRight("s")(_ + _))
+
+    println(list.scanRight(0)(_ + _))
+
+    println(list.scanLeft(0)(_ + _))
+
+
+
+
+
+  }
+}
