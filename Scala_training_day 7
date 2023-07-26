@@ -69,6 +69,47 @@ object Main {
   }
 }
 
+class BankAccount(accountNumber: String, var accountHolder: String, initialBalance: Double) {
+  
+  private var balance: Double = initialBalance
+
+  // Methods
+  def deposit(amount: Double): Unit = {
+    if (amount > 0) {
+      balance += amount
+      println(s"Deposited $amount. Current balance: $balance")
+    } else {
+      println("Invalid deposit amount.")
+    }
+  }
+
+  def withdraw(amount: Double): Unit = {
+    if (amount > 0 && amount <= balance) {
+      balance -= amount
+      println(s"Withdrew $amount. Current balance: $balance")
+    } else {
+      println("Invalid withdrawal amount or insufficient funds.")
+    }
+  }
+
+  def getBalance: Double = balance
+}
+
+// Example usage:
+object BankAccountExample {
+  def main(args: Array[String]): Unit = {
+    val myAccount = new BankAccount("123456789", "babu", 1000.0)
+
+    myAccount.deposit(500.0)
+    myAccount.withdraw(200.0)
+    println(s"Account holder: ${myAccount.accountHolder}")
+    println(s"Account balance: ${myAccount.getBalance}")
+  }
+}
+
+
+
+
 //scan  (left-right)in scala
 object Main {
 val list=List(1,2,3,4,5,6)
