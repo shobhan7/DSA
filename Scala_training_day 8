@@ -1,0 +1,125 @@
+
+//InheritanceExample
+
+class Animal(name: String) {
+
+  def makeSound(): String = "Some generic sound"
+  
+}
+
+class Cat(name: String) extends Animal(name) {
+
+  override def makeSound(): String = "Meow"
+  
+}
+
+class Dog(name: String) extends Animal(name) {
+
+  override def makeSound(): String = "Woof"
+  
+}
+
+object InheritanceExample {
+
+  def main(args: Array[String]): Unit = {
+  
+    val fluffyCat = new Cat("Fluffy")
+    
+    val maxDog = new Dog("Max")
+
+    println(s"${fluffyCat.name} says: ${fluffyCat.makeSound()}") 
+    
+    println(s"${maxDog.name} says: ${maxDog.makeSound()}")
+    
+}
+
+//single inheritance
+
+class Animal(name: String) {
+
+  def makeSound(): String = "Some generic sound"
+  
+}
+
+class Dog(name: String) extends Animal(name) {
+
+  override def makeSound(): String = "Woof"
+  
+}
+
+object SingleInheritanceExample {
+
+  def main(args: Array[String]): Unit = {
+  
+    val dog = new Dog("Buddy")
+    
+    println(s"${dog.name} says: ${dog.makeSound()}") 
+    
+  }
+}
+
+
+
+//MultipleInheritanceExample
+
+trait Swimmer {
+
+  def swim(): String = "Swimming"
+  
+}
+
+trait Flyer {
+
+  def fly(): String = "Flying"
+  
+}
+
+class Duck(name: String) extends Animal(name) with Swimmer with Flyer {
+
+  override def makeSound(): String = "Quack"
+}
+
+object MultipleInheritanceExample {
+
+  def main(args: Array[String]): Unit = {
+  
+    val duck = new Duck("Donald")
+    
+    println(s"${duck.name} says: ${duck.makeSound()}") 
+    
+    println(s"${duck.name} is ${duck.swim()}")  
+          
+    println(s"${duck.name} is ${duck.fly()}")  
+           
+}
+
+
+//HierarchicalInheritanceExample
+
+class Cat(name: String) extends Animal(name) {
+
+  override def makeSound(): String = "Meow"
+  
+}
+
+class Lion(name: String) extends Animal(name) {
+
+  override def makeSound(): String = "Roar"
+  
+}
+
+object HierarchicalInheritanceExample {
+
+  def main(args: Array[String]): Unit = {
+  
+    val cat = new Cat("Fluffy")
+    
+    val lion = new Lion("Simba")
+
+    println(s"${cat.name} says: ${cat.makeSound()}")   
+    
+    println(s"${lion.name} says: ${lion.makeSound()}") 
+  }
+}
+
+
