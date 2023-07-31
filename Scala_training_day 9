@@ -158,6 +158,44 @@ Scala's support for functions as first-class citizens and higher-order functions
 
 
 
+String operations
+
+object String_operations
+{
+  def main(args: Array[String]) {
+    val s="shobhan babu"
+    println(s)
+    println(s.length)
+
+  "hello".foreach(println)
+    for(c<-s)println(c)
+    for(j<-"shobhan")println(j)
+    s.getBytes.foreach(println)
+    println("scala".drop(2))
+    val k="scala".drop(1)
+    println(k)
+    val a="scala".drop(1).take(2)
+    println(a)
+    val b=s.toUpperCase()
+    println(b)
+    val c="eggs,milk,coco"
+    println(c.split(","))
+    val d="[0-9]+".r
+    println(d)
+    val add="123 Main street suit 101"
+    val match1=d.findAllIn(add)
+    match1.foreach(println)
+    val match2=d.findAllIn(add).toArray
+    match2.foreach(println)
+    println(match2)
+    val e="hello"(3)
+    println(e)
+    val f="hello".take(2).toUpperCase
+    println(f)
+
+
+  }
+}
 
 
 
