@@ -192,13 +192,21 @@ object String_operations
     println(e)
     val f="hello".take(2).toUpperCase
     println(f)
-
+//  val g="""this is
+//      mutable
+//    string"""
+//    val h=
+//      """ four score
+//        | and |seven year ago"""
+//        println(h)
+val g =
+"""this is
+        mutable
+      string"""
+    val h =
+      """ four score
+        | and |seven year ago""".stripMargin.replaceAll("\n","")
+    println(h)
 
   }
 }
-
-
-
-
-
-
