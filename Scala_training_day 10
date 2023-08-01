@@ -1,0 +1,173 @@
+for loop
+
+object Theforloop {
+  def main(args: Array[String]) {
+    val dayofweeklist = List("mon", "tue", "wed", "thur", "frida", "sat", "sun")
+    for (day <- dayofweeklist) {
+      println(day)
+    }
+    for (i <- 0 to dayofweeklist.size - 1) {
+      println(dayofweeklist(i))
+    }
+    for (day <- dayofweeklist if day == "mon") {
+      println(day)
+    }
+
+    for {
+      i <- 1 to 2
+      j <- 1 to 2
+    } println(s"i = $i, j = $j")
+
+    val list=List(1,2,3,4,5)
+    val result = for(i <- list) yield {
+        i*2
+      }
+      println(result)
+
+    val a= Array("apple","banana","orange")
+    for(i<-a)println(i)
+
+    val narray=for(k <-a) yield k.toUpperCase
+    val m=for (e <- a) yield e.toUpperCase
+
+
+
+	for (i <- 2 to 10 by 2) {
+  println(i)
+  
+  
+}
+for (i <- 1 to 10 if i % 2 != 0) {
+  println(i)
+}
+
+val myList = List(1, 2, 3, 4, 5)
+val squaredList = for (num <- myList) yield {
+  num * num
+}
+
+println(squaredList)
+
+
+  }
+}
+
+
+while loop
+
+object whileLoop {
+  def main(args: Array[String]): Unit = {
+    val days=List("mon","tues","wed","thur","fri")
+    var x=0
+    while (x<days.size-1)
+      {
+        x+=1
+        val day=days(x)
+        println(day)
+
+      }
+
+    val x = math.pow(3, 4)
+    println(x)
+    
+    var i = 1
+while (i <= 5) {
+  println(i)
+  i += 1
+}
+
+def factorial(n: Int): Int = {
+  var result = 1
+  var i = 1
+  while (i <= n) {
+    result *= i
+    i += 1
+  }
+  result
+}
+
+println(factorial(5))
+
+  }
+
+
+
+}
+
+//Assignment
+
+object Assignments {
+  def main(args: Array[String]): Unit = {
+    //1:what is the power of 5
+
+    val power=math.pow(2,5)
+  println(power)
+//    2. What is the remainder of 180 divided by 7?
+
+   val reminder = 180 % 7
+    println(reminder)
+  }
+  //      3. Given variable pet_name = "Sammy", use string interpolation to print out
+  //      "My dog's name is Sammy."
+
+
+  val  pet="sammy"
+  println(s"my dong name is $pet")
+
+  //    4. Use scala to find out if the letter sequence "xyz" is contained in:
+  //      "sadfjshfjyuyxyzjkfuidkjklhasyysdfk"
+  val input="sadfjshfjyuyxyzjkfuidkjklhasyysdfk"
+  val key="sad"
+  val result=input.contains(key)
+  if(result)
+    {
+      println("contains")
+    }
+    else{
+    println("not")
+  }
+  
+
+
+}
+//    5. What is the difference between a value and a variable?
+// var is mutable example: declaring varibles like var x=0
+  //val is immutable exmaple :declaring pie value val pie=3.14
+  
+6.While loop with a break statement to find the first multiple of 5 between 20 and 40:
+
+var num = 20
+while (num <= 40) {
+  if (num % 5 == 0) {
+    println(num)
+   
+    break 
+  }
+  num += 1
+}
+
+7//finfing k th element using recursion
+
+def findKthElement[A](lst: List[A], k: Int): Option[A] = {
+  if (lst.isEmpty || k <= 0 || k > lst.length) {
+    None
+  } else if (k == 1) {
+    Some(lst.head)
+  } else {
+    findKthElement(lst.tail, k - 1)
+  }
+}
+
+// Example usage:
+val my_list = List(10, 20, 30, 40, 50)
+val k_value = 3
+val result = findKthElement(my_list, k_value)
+
+result match {
+  case Some(element) => println(s"The $k_value-th element is: $element")
+  case None => println(s"Invalid k value. The list has ${my_list.length} elements.")
+}
+
+
+
+
