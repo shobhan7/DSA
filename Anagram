@@ -1,0 +1,22 @@
+import java.util.Arrays;
+public class anagram {
+public static void main(String[]args){
+    
+    String a = "shobhan";
+    String b = "shobhanA";
+
+    anagramstring(a, b);
+
+}
+   public static void anagramstring(String a, String b){
+       boolean result= Arrays.equals(a.toCharArray(),b.toCharArray());
+       if(result){
+           System.out.println("true its anagram");
+       }else {
+           System.out.println("false not anagram");
+       }
+     
+
+   }
+   
+}
