@@ -1,0 +1,37 @@
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class java8 {
+    public static void main(String[] args) {
+         String str="ilovbvveieu";
+
+               Map<String,Long> map= Arrays.stream(str.split(""))
+                        .collect(Collectors
+                                .groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(map);
+
+
+
+
+
+        int[] input = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        Map<Integer, Long> count = Arrays.stream(input)
+                .sorted().boxed()
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        //Finding the Second Highest Number in a List: How can you find the second highest number in a list of integers?
+        List<Integer> num= Arrays.asList(1,2,3,4,5,6,7,8,9);
+
+        Optional<Integer> first = num.stream().sorted(Comparator.reverseOrder())
+                .skip(1)
+                .findFirst();
+        System.out.println(first.get());
+        List<Integer> primes = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29);
+      num.stream().filter(x->x%2==0).forEach(System.out::println);
+
+
+
+
+    }
+}
